@@ -1,10 +1,5 @@
 function formatToLongString (time, type) {
-  pluralExt = 'n'
-  if(type == 'Tag'){
-    pluralExt = 'en'
-  }
-
-  return `vor ${time} ${type}${ time > 1 ? pluralExt : ''}`
+  return `vor ${time} ${type}${ time > 1 ? (type == 'Tag' ? 'en' : 'n') : ''}`
 }
 
 export default {

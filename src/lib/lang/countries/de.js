@@ -1,5 +1,5 @@
 function formatToLongString (time, type) {
-  return `vor ${time} ${type}${ time > 1 ? 's' : ''}`
+  return `vor ${time} ${type}${ time > 1 ? 'n' : ''}`
 }
 
 export default {
@@ -8,13 +8,13 @@ export default {
     sec:'s',
     min: 'm',
     hour: 'h',
-    day: 'Tag',
+    day: 'd',
   },
   long: {
     now: 'gerade eben',
-    sec: time => formatToLongString(time, 'Sekunden'),
-    min: time => formatToLongString(time, 'Minuten'),
-    hour: time => formatToLongString(time, 'Stunden'),
-    day: time => formatToLongString(time, 'Tagen'),
+    sec: time => formatToLongString(time, 'Sekunde'),
+    min: time => formatToLongString(time, 'Minute'),
+    hour: time => formatToLongString(time, 'Stunde'),
+    day: time => formatToLongString(time, 'Tage'),
   }
 }

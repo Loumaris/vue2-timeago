@@ -15,6 +15,6 @@ export default {
     sec: time => formatToLongString(time, 'Sekunde'),
     min: time => formatToLongString(time, 'Minute'),
     hour: time => formatToLongString(time, 'Stunde'),
-    day: time => formatToLongString(time, 'Tage'),
+    day: time => formatToLongString(time, 'Tag'),
   }
 }

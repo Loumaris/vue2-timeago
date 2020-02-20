@@ -39,19 +39,19 @@ class TimeAgo{
     }else if(timer < 3600){
       timeago = this.getTimeAgoString(Math.round(timer/60), min);
     }else if( timer >= 3600 && Math.round(timer/3600)< 24 ){
-      timeago = this.getTimeAgoString(Math.round(timer/3600), hour) 
+      timeago = this.getTimeAgoString(Math.round(timer/3600), hour)
     }else if(timer/86400 <=31){
-      timeago = this.getTimeAgoString(Math.round(timer/86400), day) 
+      timeago = this.getTimeAgoString(Math.round(timer/86400), day)
     }else{
-      timeago = getNowString(timestamp);
+      timeago = getNowString(timestamp, this.locale);
     }
-    
+
     return {
       timeago,
-      nowString: getNowMoreString(timestamp),
+      nowString: getNowMoreString(timestamp, this.locale),
     };
   }
 
 }
- 
+
 export default TimeAgo ;
